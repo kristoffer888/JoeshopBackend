@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\SQL\\PROJECTS\\SimpleShop\\SimpleShop\\SimpleShopModels\\SimpleShopModels.csproj",
+      "projectUniqueName": "C:\\Users\\SQL\\PROJECTS\\SimpleShop\\SimpleShopModels\\SimpleShopModels.csproj",
       "projectName": "SimpleShopModels",
-      "projectPath": "C:\\Users\\SQL\\PROJECTS\\SimpleShop\\SimpleShop\\SimpleShopModels\\SimpleShopModels.csproj",
+      "projectPath": "C:\\Users\\SQL\\PROJECTS\\SimpleShop\\SimpleShopModels\\SimpleShopModels.csproj",
       "packagesPath": "C:\\Users\\SQL\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\SQL\\PROJECTS\\SimpleShop\\SimpleShop\\SimpleShopModels\\obj\\",
+      "outputPath": "C:\\Users\\SQL\\PROJECTS\\SimpleShop\\SimpleShopModels\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
