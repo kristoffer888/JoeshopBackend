@@ -93,6 +93,7 @@ namespace SimleShopORM
                     customers.Add(new Customer(reader.GetInt32(0), reader.GetString(1)));
                     i++;
                 }
+                reader.Close();
 
                 if (i <= 0) return null;
             }
