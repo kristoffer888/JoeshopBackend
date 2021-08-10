@@ -50,18 +50,19 @@ namespace SimleShopORM
                 catch (Exception ex) {
                     throw new Exception(ex.Message);
                 }
-
-                SqlDataReader reader = cmd.ExecuteReader(System.Data.CommandBehavior.CloseConnection);
-                int i = 0;
-                while (reader.Read()) 
-                {
-                    customer = new Customer(reader.GetInt32(0), reader.GetString(1));
-                    i++;
-                }
-
-                if (i != 1) return null;
             }
-            
+
+            SqlDataReader reader = cmd.ExecuteReader(System.Data.CommandBehavior.CloseConnection);
+            int i = 0;
+            while (reader.Read())
+            {
+                customer = new Customer(reader.GetInt32(0), reader.GetString(1));
+                i++;
+            }
+            reader.Close();
+
+            if (i != 1) return null;
+
             return customer;
         }
 
