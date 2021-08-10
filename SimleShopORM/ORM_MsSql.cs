@@ -11,6 +11,7 @@ namespace SimleShopORM
     public class ORM_MsSql : IORM
     {
         private SqlConnection dbConn;
+        
         private string host = "10.142.69.56";
         private string username = "SimpleShop";
         private string password = "SimpleShop";
@@ -38,7 +39,7 @@ namespace SimleShopORM
             string query = "SELECT id, navn FROM kunde WHERE id = @val";
             SqlCommand cmd = new SqlCommand(query, dbConn);
             cmd.Parameters.AddWithValue("@val", id);
-
+            
             if (dbConn.State == System.Data.ConnectionState.Closed) 
             {
                 try
@@ -66,7 +67,36 @@ namespace SimleShopORM
 
         public List<Customer> GetCustomers()
         {
-            throw new NotImplementedException();
+            List<Customer> customers = new List<Customer>();
+
+            string query = "SELECT id, navn FROM kunde";
+            SqlCommand cmd = new SqlCommand(query, dbConn);
+
+            if (dbConn.State == System.Data.ConnectionState.Closed)
+            {
+                try
+                {
+                    // open database connection
+                    dbConn.Open();
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception(ex.Message);
+                }
+
+                
+                SqlDataReader reader = cmd.ExecuteReader(System.Data.CommandBehavior.CloseConnection);
+                int i = 0;
+                while (reader.Read())
+                {
+                    customers.Add(new Customer(reader.GetInt32(0), reader.GetString(1)));
+                    i++;
+                }
+
+                if (i <= 0) return null;
+            }
+
+            return customers;
         }
 
         public Product GetProduct(int id)
