@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dIkZchZ3R8lGlPJHMi9GXTV0XAL3OGyB9jItpvcWrjBuovCIdQAtQOBoZg/56uUgsjf0uz+Qld3Y6xOKjz93Zw==",
+  "dgSpecHash": "CzaS0rj001V6dzsuMsHP5ScHeh+7HppPY3N2xnFjbSfmrgLN653ck7AvISMr7UXIcPmZxedneY0QsD75niwrGA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\SQL\\PROJECTS\\SimpleShop\\SimleShopORM\\SimleShopORM.csproj",
+  "projectFilePath": "C:\\Users\\SQL\\PROJECTS\\SimpleShop\\SimpleShopORMTestApp\\SimpleShopORMTestApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\SQL\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\SQL\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
