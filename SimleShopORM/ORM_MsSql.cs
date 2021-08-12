@@ -84,19 +84,19 @@ namespace SimleShopORM
                 {
                     throw new Exception(ex.Message);
                 }
-
-                
-                SqlDataReader reader = cmd.ExecuteReader(System.Data.CommandBehavior.CloseConnection);
-                int i = 0;
-                while (reader.Read())
-                {
-                    customers.Add(new Customer(reader.GetInt32(0), reader.GetString(1)));
-                    i++;
-                }
-                reader.Close();
-
-                if (i <= 0) return null;
             }
+
+            SqlDataReader reader = cmd.ExecuteReader(System.Data.CommandBehavior.CloseConnection);
+            int i = 0;
+            while (reader.Read())
+            {
+                customers.Add(new Customer(reader.GetInt32(0), reader.GetString(1)));
+                i++;
+            }
+            reader.Close();
+
+            if (i <= 0) return null;
+            
 
             return customers;
         }
