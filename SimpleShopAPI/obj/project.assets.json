@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\SQL\\PROJECTS\\SimpleShop\\SimpleShopModels\\SimpleShopModels.csproj",
-      "projectName": "SimpleShopModels",
-      "projectPath": "C:\\Users\\SQL\\PROJECTS\\SimpleShop\\SimpleShopModels\\SimpleShopModels.csproj",
+      "projectUniqueName": "C:\\Users\\SQL\\PROJECTS\\SimpleShop\\SimpleShopAPI\\SimpleShopAPI.csproj",
+      "projectName": "SimpleShopAPI",
+      "projectPath": "C:\\Users\\SQL\\PROJECTS\\SimpleShop\\SimpleShopAPI\\SimpleShopAPI.csproj",
       "packagesPath": "C:\\Users\\SQL\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\SQL\\PROJECTS\\SimpleShop\\SimpleShopModels\\obj\\",
+      "outputPath": "C:\\Users\\SQL\\PROJECTS\\SimpleShop\\SimpleShopAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -61,6 +61,9 @@
         "assetTargetFallback": true,
         "warn": true,
         "frameworkReferences": {
+          "Microsoft.AspNetCore.App": {
+            "privateAssets": "none"
+          },
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }

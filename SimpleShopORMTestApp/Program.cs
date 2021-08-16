@@ -10,20 +10,26 @@ namespace SimpleShopORMTestApp
         static void Main(string[] args)
         {
             ORM_MsSql ORM = new ORM_MsSql();
-            
-            // Get customer by id
-            Customer cust1 = ORM.GetCustomer(2);
-            Console.WriteLine(cust1.CustomerName);
 
-            Console.WriteLine();
-            Console.WriteLine();
-
-            // Get all customers
-            List <Customer> customers = ORM.GetCustomers();
-            foreach (var customer in customers)
+            List<Product> products = ORM.GetProducts();
+            foreach (var product in products) 
             {
-                Console.WriteLine(customer.CustomerName);
+                Console.WriteLine(product.ProductName + " " + product.ProductPrice);
             }
+
+            //// Get customer by id
+            //Customer cust1 = ORM.GetCustomer(2);
+            //Console.WriteLine(cust1.CustomerName);
+
+            //Console.WriteLine();
+            //Console.WriteLine();
+
+            //// Get all customers
+            //List <Customer> customers = ORM.GetCustomers();
+            //foreach (var customer in customers)
+            //{
+            //    Console.WriteLine(customer.CustomerName);
+            //}
         }
     }
 }

@@ -12,7 +12,7 @@ namespace SimleShopORM
     {
         private SqlConnection dbConn;
         
-        private string host = "10.142.69.56";
+        private string host = "10.130.64.131";
         private string username = "SimpleShop";
         private string password = "SimpleShop";
         private string database = "SimpleShop";
@@ -65,7 +65,7 @@ namespace SimleShopORM
 
             return customer;
         }
-
+         
         public List<Customer> GetCustomers()
         {
             List<Customer> customers = new List<Customer>();
@@ -108,7 +108,36 @@ namespace SimleShopORM
 
         public List<Product> GetProducts()
         {
-            throw new NotImplementedException();
+            List<Product> products = new List<Product>();
+
+            string query = "SELECT id, navn, pris FROM produkt";
+            SqlCommand cmd = new SqlCommand(query, dbConn);
+
+            if (dbConn.State == System.Data.ConnectionState.Closed)
+            {
+                try
+                {
+                    // open database connection
+                    dbConn.Open();
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception(ex.Message);
+                }
+            }
+            SqlDataReader reader = cmd.ExecuteReader(System.Data.CommandBehavior.CloseConnection);
+            int i = 0;
+            while (reader.Read())
+            {
+                products.Add(new Product(reader.GetInt32(0), reader.GetString(1), reader.GetDecimal(2)));
+                i++;
+            }
+            reader.Close();
+
+            if (i <= 0) return null;
+
+
+            return products;
         }
     }
 }
