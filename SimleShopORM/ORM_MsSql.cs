@@ -103,7 +103,36 @@ namespace SimleShopORM
 
         public Product GetProduct(int id)
         {
-            throw new NotImplementedException();
+            Product product = null;
+
+            string query = "SELECT id, navn, pris FROM produkt WHERE id = @val";
+            SqlCommand cmd = new SqlCommand(query, dbConn);
+            cmd.Parameters.AddWithValue("@val", id);
+
+            if (dbConn.State == System.Data.ConnectionState.Closed)
+            {
+                try
+                {
+                    // open database connection
+                    dbConn.Open();
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception(ex.Message);
+                }
+            }
+            SqlDataReader reader = cmd.ExecuteReader(System.Data.CommandBehavior.CloseConnection);
+            int i = 0;
+            while (reader.Read())
+            {
+                product = new Product(reader.GetInt32(0), reader.GetString(1), reader.GetDecimal(2));
+                i++;
+            }
+            reader.Close();
+
+            if (i <= 0) return null;
+
+            return product;
         }
 
         public List<Product> GetProducts()
