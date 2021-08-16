@@ -59,4 +59,4 @@ namespace SimpleShopAPI.Controllers
             return products;
         }
     }
-}
+} 
