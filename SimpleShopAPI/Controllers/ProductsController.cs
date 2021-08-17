@@ -20,7 +20,7 @@ namespace SimpleShopAPI.Controllers
             ORM = new ORM_MsSql();
         }
 
-
+        // Get product by id
         [HttpGet("{id}")]
         public ActionResult<Product> Get(int id)
         {
@@ -41,6 +41,7 @@ namespace SimpleShopAPI.Controllers
             return product;
         }
 
+        // Get all products
         [HttpGet]
         public ActionResult<IEnumerable<Product>> Get()
         {
@@ -58,5 +59,13 @@ namespace SimpleShopAPI.Controllers
 
             return products;
         }
+
+        [HttpPost]
+        public ActionResult<Product> Post([FromBody] Product product)
+        {
+            ORM.CreateProduct(product);
+            return product;
+        }
+
     }
 } 

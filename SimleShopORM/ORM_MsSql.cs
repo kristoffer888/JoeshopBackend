@@ -168,5 +168,29 @@ namespace SimleShopORM
 
             return products;
         }
+
+        public Product CreateProduct(Product product)
+        {
+            string query = "INSERT INTO produkt (navn, pris) VALUES (@val1, @val2); SELECT SCOPE_IDENTITY() AS id;";
+            SqlCommand cmd = new SqlCommand(query, dbConn);
+            cmd.Parameters.AddWithValue("@val1", product.ProductName);
+            cmd.Parameters.AddWithValue("@val2", product.ProductPrice);
+
+            if (dbConn.State == System.Data.ConnectionState.Closed)
+            {
+                try
+                {
+                    dbConn.Open();
+                } catch (Exception ex)
+                {
+                    throw new Exception(ex.Message);
+                }
+            }
+
+            product.SetId(Convert.ToInt32(cmd.ExecuteScalar()));
+            dbConn.Close();
+
+            return product;
+        }
     }
 }

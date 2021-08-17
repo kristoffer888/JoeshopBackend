@@ -13,5 +13,6 @@ namespace SimleShopORM
         public Customer GetCustomer(int id);
         public List<Product> GetProducts();
         public Product GetProduct(int id);
+        public Product CreateProduct(Product product);
     }
 }
