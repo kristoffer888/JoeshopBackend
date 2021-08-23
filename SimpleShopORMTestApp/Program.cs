@@ -1,6 +1,7 @@
 ﻿using SimleShopORM;
 using SimpleShopModels;
 using System;
+using System.Collections.Generic;
 
 namespace SimpleShopORMTestApp
 {
@@ -9,8 +10,12 @@ namespace SimpleShopORMTestApp
         static void Main(string[] args)
         {
             ORM_MsSql ORM = new ORM_MsSql();
-            Customer cust1 = ORM.GetCustomer(2);
-            Console.WriteLine(cust1.CustomerName);
+            List<Customer> cust1 = ORM.GetCustomers();
+
+            foreach (Customer joe in cust1)
+            {
+                Console.WriteLine(joe.CustomerName);
+            }
         }
     }
 }

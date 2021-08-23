@@ -11,10 +11,10 @@ namespace SimleShopORM
     public class ORM_MsSql : IORM
     {
         private SqlConnection dbConn;
-        private string host = "10.142.69.56";
-        private string username = "SimpleShop";
-        private string password = "SimpleShop";
-        private string database = "SimpleShop";
+        private string host = "localhost";
+        private string username = "admin";
+        private string password = "admin";
+        private string database = "Butik";
 
         public ORM_MsSql()
         {
@@ -35,7 +35,7 @@ namespace SimleShopORM
         {
             Customer customer = null;
 
-            string query = "SELECT id, navn FROM kunde WHERE id = @val";
+            string query = "SELECT * FROM Kunde WHERE id = @val";
             SqlCommand cmd = new SqlCommand(query, dbConn);
             cmd.Parameters.AddWithValue("@val", id);
 
@@ -54,7 +54,7 @@ namespace SimleShopORM
                 int i = 0;
                 while (reader.Read()) 
                 {
-                    customer = new Customer(reader.GetInt32(0), reader.GetString(1));
+                    customer = new Customer(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4));
                     i++;
                 }
 
@@ -63,20 +63,67 @@ namespace SimleShopORM
             
             return customer;
         }
-
         public List<Customer> GetCustomers()
         {
-            throw new NotImplementedException();
-        }
+            List<Customer> customers = new List<Customer>();
 
-        public Product GetProduct(int id)
-        {
-            throw new NotImplementedException();
-        }
+            string query = "SELECT * FROM Kunde";
+            SqlCommand cmd = new SqlCommand(query, dbConn);
 
-        public List<Product> GetProducts()
+            if (dbConn.State == System.Data.ConnectionState.Closed)
+            {
+                try
+                {
+                    // open database connection
+                    dbConn.Open();
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception(ex.Message);
+                }
+
+                SqlDataReader reader = cmd.ExecuteReader(System.Data.CommandBehavior.CloseConnection);
+                int i = 0;
+                while (reader.Read())
+                {
+                    customers.Add( new Customer(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4)));
+                    i++;
+                }
+            }
+
+            return customers;
+        }
+        public Customer CreateCostumer(Customer customer)
         {
-            throw new NotImplementedException();
+            string query = "INSERT INTO Kunde (Navn, Adresse,Lokation_ID,Email, Password) VALUES (@val1, @val2, @val3, @val4, @val5); SELECT SCOPE_IDENTITY() AS id;";
+            SqlCommand cmd = new SqlCommand(query, dbConn);
+            cmd.Parameters.AddWithValue("@val1", product.CustomerName);
+            cmd.Parameters.AddWithValue("@val2", product.CustomerAddress);
+            cmd.Parameters.AddWithValue("@val3", product.CustomerLocation);
+            cmd.Parameters.AddWithValue("@val4", product.CustomerEmail);
+            cmd.Parameters.AddWithValue("@val5", product.CustomerPassword);
+
+            if (dbConn.State == System.Data.ConnectionState.Closed)
+            {
+                try
+                {
+                    dbConn.Open();
+                } catch (Exception ex)
+                {
+                    throw new Exception(ex.Message);
+                }
+            }
+
+            customer.SetId(Convert.ToInt32(cmd.ExecuteScalar()));
+            dbConn.Close();
+
+            return customer;
+        }
+        public Product UpdateCustomer(Customer customer)
+        {
+        }
+        public Product DeleteCustomer(Customer customer)
+        {
         }
     }
 }

@@ -11,13 +11,18 @@ namespace SimpleShopModels
         public int ProductId { get; set; }
 
         public string ProductName { get; set; }
-
+        public Category ProductCategory { get; set; }
+        public Variant ProductVariant { get; set; }
+        public Manufacturer ProductManufacturer { get; set; }
         public decimal ProductPrice  { get; set; }
 
         // Constructor, takes name and price
-        public Product(string name, decimal price) 
+        public Product(string name, Category category, Variant variant, Manufacturer manufacturer, decimal price) 
         {
             ProductName = name;
+            ProductCategory = category;
+            ProductVariant = variant;
+            ProductManufacturer = manufacturer;
             ProductPrice = price;
         }
 

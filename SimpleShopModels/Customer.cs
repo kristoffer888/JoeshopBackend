@@ -6,22 +6,28 @@ namespace SimpleShopModels
     public class Customer
     {
         public int CustomerId { get; set; }
-
         public string CustomerName { get; set; }
-
+        public string CustomerAddress { get; set; }
+        public string CustomerLocation { get; set; }
+        public string CustomerEmail { get; set; }
+        public string CustomerPassword { get; set; }
         public List<Order> Orders { get; set; }
 
-        // Constructor, takes name
-        public Customer(string name)    
-        {
-            CustomerName = name;
-        }
 
-        // Constructor overload, takes id, name
-        public Customer(int id, string name)
+        // Constructor 
+        public Customer(int id)
         {
             CustomerId = id;
+        }
+
+        // Constructor overload
+        public Customer(string name, string address, string location, string email, string password)    
+        {
             CustomerName = name;
+            CustomerAddress = address;
+            CustomerLocation = location;
+            CustomerEmail = email;
+            CustomerPassword = password;
         }
     }
 }

@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\SQL\\PROJECTS\\SimpleShop\\SimleShopORM\\SimleShopORM.csproj": {}
+    "C:\\Users\\krist\\workspace\\simpleshop\\SimpleShop\\SimleShopORM\\SimleShopORM.csproj": {}
   },
   "projects": {
-    "C:\\Users\\SQL\\PROJECTS\\SimpleShop\\SimleShopORM\\SimleShopORM.csproj": {
+    "C:\\Users\\krist\\workspace\\simpleshop\\SimpleShop\\SimleShopORM\\SimleShopORM.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\SQL\\PROJECTS\\SimpleShop\\SimleShopORM\\SimleShopORM.csproj",
+        "projectUniqueName": "C:\\Users\\krist\\workspace\\simpleshop\\SimpleShop\\SimleShopORM\\SimleShopORM.csproj",
         "projectName": "SimleShopORM",
-        "projectPath": "C:\\Users\\SQL\\PROJECTS\\SimpleShop\\SimleShopORM\\SimleShopORM.csproj",
-        "packagesPath": "C:\\Users\\SQL\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\SQL\\PROJECTS\\SimpleShop\\SimleShopORM\\obj\\",
+        "projectPath": "C:\\Users\\krist\\workspace\\simpleshop\\SimpleShop\\SimleShopORM\\SimleShopORM.csproj",
+        "packagesPath": "C:\\Users\\krist\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\krist\\workspace\\simpleshop\\SimpleShop\\SimleShopORM\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\SQL\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\krist\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -32,8 +28,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\SQL\\PROJECTS\\SimpleShop\\SimpleShopModels\\SimpleShopModels.csproj": {
-                "projectPath": "C:\\Users\\SQL\\PROJECTS\\SimpleShop\\SimpleShopModels\\SimpleShopModels.csproj"
+              "C:\\Users\\krist\\workspace\\simpleshop\\SimpleShop\\SimpleShopModels\\SimpleShopModels.csproj": {
+                "projectPath": "C:\\Users\\krist\\workspace\\simpleshop\\SimpleShop\\SimpleShopModels\\SimpleShopModels.csproj"
               }
             }
           }
@@ -72,21 +68,17 @@
         }
       }
     },
-    "C:\\Users\\SQL\\PROJECTS\\SimpleShop\\SimpleShopModels\\SimpleShopModels.csproj": {
+    "C:\\Users\\krist\\workspace\\simpleshop\\SimpleShop\\SimpleShopModels\\SimpleShopModels.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\SQL\\PROJECTS\\SimpleShop\\SimpleShopModels\\SimpleShopModels.csproj",
+        "projectUniqueName": "C:\\Users\\krist\\workspace\\simpleshop\\SimpleShop\\SimpleShopModels\\SimpleShopModels.csproj",
         "projectName": "SimpleShopModels",
-        "projectPath": "C:\\Users\\SQL\\PROJECTS\\SimpleShop\\SimpleShopModels\\SimpleShopModels.csproj",
-        "packagesPath": "C:\\Users\\SQL\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\SQL\\PROJECTS\\SimpleShop\\SimpleShopModels\\obj\\",
+        "projectPath": "C:\\Users\\krist\\workspace\\simpleshop\\SimpleShop\\SimpleShopModels\\SimpleShopModels.csproj",
+        "packagesPath": "C:\\Users\\krist\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\krist\\workspace\\simpleshop\\SimpleShop\\SimpleShopModels\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\SQL\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\krist\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

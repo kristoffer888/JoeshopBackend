@@ -10,3 +10,15 @@ C:\Users\SQL\PROJECTS\SimpleShop\SimpleShopModels\obj\Debug\net5.0\SimpleShopMod
 C:\Users\SQL\PROJECTS\SimpleShop\SimpleShopModels\obj\Debug\net5.0\SimpleShopModels.dll
 C:\Users\SQL\PROJECTS\SimpleShop\SimpleShopModels\obj\Debug\net5.0\ref\SimpleShopModels.dll
 C:\Users\SQL\PROJECTS\SimpleShop\SimpleShopModels\obj\Debug\net5.0\SimpleShopModels.pdb
+C:\Users\krist\workspace\simpleshop\SimpleShop\SimpleShopModels\bin\Debug\net5.0\SimpleShopModels.deps.json
+C:\Users\krist\workspace\simpleshop\SimpleShop\SimpleShopModels\bin\Debug\net5.0\SimpleShopModels.dll
+C:\Users\krist\workspace\simpleshop\SimpleShop\SimpleShopModels\bin\Debug\net5.0\ref\SimpleShopModels.dll
+C:\Users\krist\workspace\simpleshop\SimpleShop\SimpleShopModels\bin\Debug\net5.0\SimpleShopModels.pdb
+C:\Users\krist\workspace\simpleshop\SimpleShop\SimpleShopModels\obj\Debug\net5.0\SimpleShopModels.csproj.AssemblyReference.cache
+C:\Users\krist\workspace\simpleshop\SimpleShop\SimpleShopModels\obj\Debug\net5.0\SimpleShopModels.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\krist\workspace\simpleshop\SimpleShop\SimpleShopModels\obj\Debug\net5.0\SimpleShopModels.AssemblyInfoInputs.cache
+C:\Users\krist\workspace\simpleshop\SimpleShop\SimpleShopModels\obj\Debug\net5.0\SimpleShopModels.AssemblyInfo.cs
+C:\Users\krist\workspace\simpleshop\SimpleShop\SimpleShopModels\obj\Debug\net5.0\SimpleShopModels.csproj.CoreCompileInputs.cache
+C:\Users\krist\workspace\simpleshop\SimpleShop\SimpleShopModels\obj\Debug\net5.0\SimpleShopModels.dll
+C:\Users\krist\workspace\simpleshop\SimpleShop\SimpleShopModels\obj\Debug\net5.0\ref\SimpleShopModels.dll
+C:\Users\krist\workspace\simpleshop\SimpleShop\SimpleShopModels\obj\Debug\net5.0\SimpleShopModels.pdb

@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SimleShopORM\SimleShopORM.csproj" />
+    <ProjectReference Include="..\SimleShopORM\JoeShopORM.csproj" />
   </ItemGroup>
 
 </Project>

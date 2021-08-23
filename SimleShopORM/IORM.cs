@@ -11,7 +11,8 @@ namespace SimleShopORM
     {
         public List<Customer> GetCustomers();
         public Customer GetCustomer(int id);
-        public List<Product> GetProducts();
-        public Product GetProduct(int id);
+        public Customer CreateCustomer(Customer customer);
+        public Customer UpdateCustomer(Customer customer);
+        public Customer DeleteCustomer(int id);
     }
 }

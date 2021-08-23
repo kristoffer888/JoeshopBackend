@@ -9,14 +9,21 @@ namespace SimpleShopModels
     public class Order
     {
         public int OrderId { get; set; }
-        public DateTime OrderDate { get; set; }
-        public OrderStatus OrderStatus { get; set; }
+        public int OrderAmount { get; set; }
+        public decimal OrderPrice { get; set; }
         public List<Product> Products { get; set; }
 
-        public Order(OrderStatus status)
+        // Constructor, takes name
+        public Order(int amount, decimal price)
         {
-            OrderStatus = status;
+            OrderAmount = amount;
+            OrderPrice = price;
+        }
 
+        // Constructor overload, takes id, name
+        public Order(int id)
+        {
+            OrderId = id;
         }
 
     }

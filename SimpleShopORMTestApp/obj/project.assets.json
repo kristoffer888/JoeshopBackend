@@ -131,28 +131,28 @@
           }
         }
       },
-      "SimleShopORM/1.0.0": {
+      "JoeShopModels/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/JoeShopModels.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/JoeShopModels.dll": {}
+        }
+      },
+      "JoeShopORM/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
-          "SimpleShopModels": "1.0.0",
+          "JoeShopModels": "1.0.0",
           "System.Data.SqlClient": "4.8.2"
         },
         "compile": {
-          "bin/placeholder/SimleShopORM.dll": {}
+          "bin/placeholder/JoeShopORM.dll": {}
         },
         "runtime": {
-          "bin/placeholder/SimleShopORM.dll": {}
-        }
-      },
-      "SimpleShopModels/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v5.0",
-        "compile": {
-          "bin/placeholder/SimpleShopModels.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/SimpleShopModels.dll": {}
+          "bin/placeholder/JoeShopORM.dll": {}
         }
       }
     }
@@ -471,41 +471,36 @@
         "version.txt"
       ]
     },
-    "SimleShopORM/1.0.0": {
+    "JoeShopModels/1.0.0": {
       "type": "project",
-      "path": "../SimleShopORM/SimleShopORM.csproj",
-      "msbuildProject": "../SimleShopORM/SimleShopORM.csproj"
+      "path": "../SimpleShopModels/JoeShopModels.csproj",
+      "msbuildProject": "../SimpleShopModels/JoeShopModels.csproj"
     },
-    "SimpleShopModels/1.0.0": {
+    "JoeShopORM/1.0.0": {
       "type": "project",
-      "path": "../SimpleShopModels/SimpleShopModels.csproj",
-      "msbuildProject": "../SimpleShopModels/SimpleShopModels.csproj"
+      "path": "../SimleShopORM/JoeShopORM.csproj",
+      "msbuildProject": "../SimleShopORM/JoeShopORM.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-      "SimleShopORM >= 1.0.0"
+      "JoeShopORM >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\SQL\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\krist\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\SQL\\PROJECTS\\SimpleShop\\SimpleShopORMTestApp\\SimpleShopORMTestApp.csproj",
-      "projectName": "SimpleShopORMTestApp",
-      "projectPath": "C:\\Users\\SQL\\PROJECTS\\SimpleShop\\SimpleShopORMTestApp\\SimpleShopORMTestApp.csproj",
-      "packagesPath": "C:\\Users\\SQL\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\SQL\\PROJECTS\\SimpleShop\\SimpleShopORMTestApp\\obj\\",
+      "projectUniqueName": "C:\\Users\\krist\\workspace\\simpleshop\\SimpleShop\\SimpleShopORMTestApp\\JoeShopORMTestApp.csproj",
+      "projectName": "JoeShopORMTestApp",
+      "projectPath": "C:\\Users\\krist\\workspace\\simpleshop\\SimpleShop\\SimpleShopORMTestApp\\JoeShopORMTestApp.csproj",
+      "packagesPath": "C:\\Users\\krist\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\krist\\workspace\\simpleshop\\SimpleShop\\SimpleShopORMTestApp\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\SQL\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\krist\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -519,8 +514,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\SQL\\PROJECTS\\SimpleShop\\SimleShopORM\\SimleShopORM.csproj": {
-              "projectPath": "C:\\Users\\SQL\\PROJECTS\\SimpleShop\\SimleShopORM\\SimleShopORM.csproj"
+            "C:\\Users\\krist\\workspace\\simpleshop\\SimpleShop\\SimleShopORM\\JoeShopORM.csproj": {
+              "projectPath": "C:\\Users\\krist\\workspace\\simpleshop\\SimpleShop\\SimleShopORM\\JoeShopORM.csproj"
             }
           }
         }
