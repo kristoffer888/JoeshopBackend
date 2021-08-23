@@ -39,20 +39,21 @@ namespace SimleShopORM
             SqlCommand cmd = new SqlCommand(query, dbConn);
             cmd.Parameters.AddWithValue("@val", id);
 
-            if (dbConn.State == System.Data.ConnectionState.Closed) 
+            if (dbConn.State == System.Data.ConnectionState.Closed)
             {
                 try
                 {
                     // open database connection
                     dbConn.Open();
                 }
-                catch (Exception ex) {
+                catch (Exception ex)
+                {
                     throw new Exception(ex.Message);
                 }
 
                 SqlDataReader reader = cmd.ExecuteReader(System.Data.CommandBehavior.CloseConnection);
                 int i = 0;
-                while (reader.Read()) 
+                while (reader.Read())
                 {
                     customer = new Customer(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4));
                     i++;
@@ -60,7 +61,7 @@ namespace SimleShopORM
 
                 if (i != 1) return null;
             }
-            
+
             return customer;
         }
         public List<Customer> GetCustomers()
@@ -86,7 +87,7 @@ namespace SimleShopORM
                 int i = 0;
                 while (reader.Read())
                 {
-                    customers.Add( new Customer(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4)));
+                    customers.Add(new Customer(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4)));
                     i++;
                 }
             }
@@ -108,7 +109,8 @@ namespace SimleShopORM
                 try
                 {
                     dbConn.Open();
-                } catch (Exception ex)
+                }
+                catch (Exception ex)
                 {
                     throw new Exception(ex.Message);
                 }

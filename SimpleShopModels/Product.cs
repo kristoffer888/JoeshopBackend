@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace SimpleShopModels
 {
     public class Product
     {
-        public int ProductId { get; set; }
+        public int ProductId { get; private set; }
 
         public string ProductName { get; set; }
         public Category ProductCategory { get; set; }
@@ -32,6 +33,11 @@ namespace SimpleShopModels
             ProductId = id;
             ProductName = name;
             ProductPrice = price;
+        }
+
+        public void SetId(int id)
+        {
+            ProductId = id;
         }
     }
 }
