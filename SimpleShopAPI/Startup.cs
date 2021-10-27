@@ -28,6 +28,24 @@ namespace SimpleShopAPI
                 
             });
             services.AddControllers();
+
+
+
+            services.AddCors(options => options.AddDefaultPolicy(
+                builder => builder.AllowAnyOrigin()));
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("MyAllowSpecificOrigins",
+                                  builder =>
+                                  {
+                                      builder
+                                          .AllowAnyOrigin()
+                                          .AllowAnyHeader()
+                                          .AllowAnyMethod()
+                                          ;
+                                  });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -45,6 +63,8 @@ namespace SimpleShopAPI
             }
 
             app.UseRouting();
+
+            app.UseCors();
 
             app.UseAuthorization();
 

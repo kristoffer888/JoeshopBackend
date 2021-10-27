@@ -16,16 +16,11 @@ namespace SimpleShopModels
         public int LocationZipCode  { get; set; }
 
         // Constructor, takes name and price
-        public Location(string City, int ZipCode) 
+        public Location(int locationid, int ZipCode) 
         {
-            LocationCity = City;
+            LocationId = locationid;
             LocationZipCode = ZipCode;
         }
 
-        // Constructor, takes: id
-        public Location(int id)
-        {
-            LocationId = id;
-        }
     }
 }

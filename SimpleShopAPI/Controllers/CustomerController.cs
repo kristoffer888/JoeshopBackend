@@ -1,11 +1,11 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using JoeShopORM;
-using JoeShopModels;
+using SimpleShopModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using SimleShopORM;
 
 namespace SimpleShopAPI.Controllers
 {
@@ -66,6 +66,23 @@ namespace SimpleShopAPI.Controllers
             ORM.CreateCustomer(customer);
             return customer;
         }
+        // Update a Customer
+        [HttpPut]
+        public ActionResult<Customer> Put([FromBody] Customer customer)
+        {
+            ORM.UpdateCustomer(customer);
+            return customer;
+        }
+
+        [HttpDelete]
+        public ActionResult<Customer> Delete([FromBody] Customer customer)
+        {
+            ORM.DeleteCustomer(customer);
+            return customer;
+        }
 
     }
-} 
+}
+
+
+

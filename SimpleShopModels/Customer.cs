@@ -12,26 +12,37 @@ namespace SimpleShopModels
         public int CustomerId { get; set; }
         public string CustomerName { get; set; }
         public string CustomerAddress { get; set; }
-        public string CustomerLocation { get; set; }
+        public Location CustomerLocation { get; set; }
         public string CustomerEmail { get; set; }
         public string CustomerPassword { get; set; }
         public List<Order> Orders { get; set; }
 
 
         // Constructor 
-        public Customer(int id)
-        {
-            CustomerId = id;
-        }
-
-        // Constructor overload
-        public Customer(string name, string address, string location, string email, string password)    
+        [JsonConstructor]
+        public Customer(string name, string address, Location location, string email, string password)
         {
             CustomerName = name;
             CustomerAddress = address;
             CustomerLocation = location;
             CustomerEmail = email;
             CustomerPassword = password;
+        }
+
+        // Constructor overload
+        public Customer(int id, string name, string address, Location location, string email, string password)    
+        {
+            CustomerId = id;
+            CustomerName = name;
+            CustomerAddress = address;
+            CustomerLocation = location;
+            CustomerEmail = email;
+            CustomerPassword = password;
+        }
+
+        public void SetId(int id)
+        {
+            CustomerId = id;
         }
     }
 }

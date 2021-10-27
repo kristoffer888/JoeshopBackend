@@ -14,16 +14,25 @@ namespace SimpleShopModels
         public string ManufacturerName { get; set; }
 
 
-        // Constructor, takes name and price
-        public Manufacturer(string name) 
+        // Constructor, takes name
+        [JsonConstructor]
+        public Manufacturer(string manufacturerName) 
         {
-            ManufacturerName = name;
+            ManufacturerName = manufacturerName;
+        }
+
+        public Manufacturer(int manufacturerId, string manufacturerName)
+        {
+            ManufacturerId = manufacturerId;
+            ManufacturerName = manufacturerName;
         }
 
         // Constructor, takes: id
-        public Manufacturer(int id)
+
+
+        public void SetId(int manufacturerId)
         {
-            ManufacturerId = id;
+            ManufacturerId = manufacturerId;
         }
     }
 }
